@@ -1,0 +1,149 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
+/* beginning of header styles */
+header{
+height: 8vh;
+background-color: navy;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+header nav ul li
+{
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+header nav ul li:hover
+{
+  background-color: indigo;
+}
+
+
+header nav ul li a{
+color:white;
+text-decoration: none;
+font-size: 30px;
+    
+}
+
+/*end of header styles*/
+
+section{
+    height: 75vh;
+    padding: 60px;
+
+}
+
+/*beginning of main section styles*/
+#main
+{
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    
+}
+
+#main p{
+    color: blue;
+    font-size: 200px;
+    font-weight: bolder;
+    
+}
+
+/*end of main section styles*/
+#About_Me
+{
+background-color:orchid;
+}
+#profile{
+    width:100%;
+}
+#profile_image
+{
+   float:left;
+    width:20%;
+    height:60%;
+}
+#profile_image img
+{
+   width:100%;
+   height:100%;
+ 
+}
+
+#profile_description{
+    width: 70%;
+    float: right;
+
+}
+
+
+
+/*beginning of work section styles*/
+
+/*end of work section styles*/
+#Work
+{
+    background-color: coral;
+}
+.Project
+{
+   width:80%;
+   height:30vh;
+   background-color: transparent;
+   box-shadow: 13px 12px  20px white;
+   margin-left:auto;
+   margin-right:auto;
+   padding:10px;
+   display: flex;
+   
+}
+.Project:hover
+{
+    transform: scale(1.1);
+}
+.Project img
+{
+    height:100%;
+    width:30%;
+}
+.Project div
+{
+    width:68%;
+    padding: 30px;
+}
+
+
+/*beginning of contact section styles*/
+#Contact
+{
+    background-color: cadetblue;
+}
+/*end of contact section styles*/
+
+/*Beginning of footer section*/
+footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:black;
+
+    color: white;
+    height: 20vh;
+}
+
+
+
+
+
+
+

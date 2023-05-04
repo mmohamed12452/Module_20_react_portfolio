@@ -1,0 +1,90 @@
+import React, { useState } from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
+import {
+  AiFillStar,
+  AiOutlineHome,
+  AiOutlineFundProjectionScreen,
+  AiOutlineContacts
+} from "react-icons/ai";
+
+
+const NavBar = () => {
+    const [expand, updateExpanded] = useState(false);
+  const [navColour, updateNavbar] = useState(false);
+
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
+    }
+  }
+
+  window.addEventListener("scroll", scrollHandler);
+
+    return(
+        <NavBar 
+        expanded={expand}
+        fixed="top"
+        expand="md"
+        className={navColour ? "sticky" : "navbar"} 
+
+        >
+            <Container>
+              <Navbar.Brand href="/" className="d-flex">
+                MO MO
+               </Navbar.Brand> 
+               <NavBar.Toggle
+               aria-controls="responsive-navbar-nav"
+               onClick={()=>{
+                updateExpanded(expand?false:"expanded");
+               }}
+               >
+                <span></span><span></span><span></span>
+                
+               </NavBar.Toggle>
+               <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="ms-auto" defaultActiveKey={"#home"}>
+                    <Nav.Item>
+                        <Nav.Link as ={Link} to="/" onClick={() => updateExpanded(false)}>
+                            <AiOutlineHome style={{marginBottom: "2px"}}/>
+                            Home
+                        </Nav.Link>
+                    </Nav.Item>
+
+                    <Nav.Item>
+                        <Nav.Link as ={Link} to="/projects" onClick={() => updateExpanded(false)}>
+                            <AiOutlineHome style={{marginBottom: "2px"}}/>
+                            My Projects
+                        </Nav.Link>
+                    </Nav.Item>
+
+                    <Nav.Item>
+                        <Nav.Link as ={Link} to="/aboutme" onClick={() => updateExpanded(false)}>
+                            <AiOutlineHome style={{marginBottom: "2px"}}/>
+                            About Me
+                        </Nav.Link>
+                    </Nav.Item>
+
+                    <Nav.Item>
+                        <Nav.Link as ={Link} to="/contact" onClick={() => updateExpanded(false)}>
+                            <AiOutlineHome style={{marginBottom: "2px"}}/>
+                            Contact Me
+                        </Nav.Link>
+                    </Nav.Item>
+
+                </Nav>
+
+               </Navbar.Collapse>
+            </Container>
+               
+        </NavBar>
+
+    )
+
+}
+
+export default NavBar;
