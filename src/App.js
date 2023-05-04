@@ -7,6 +7,8 @@ import PreLoader from './components/PreLoader';
 import Projects from './pages/Projects';
 import Contact from  './pages/Contact';
 import Footer from './pages/Footer';
+import Resume from './pages/Resume';
+import ScrollToTop from './ScrollToTop';
 
 import './App.css';
 import './style.css';
@@ -24,21 +26,22 @@ function App() {
   }, []);
 
   return (  
-    <>
-    <Home/>
-    <Projects/>
-    <Contact/>
-    <Footer/>
-    </>
-  //   <Router>
-  //   <PreLoader load={load}/>
-  //   <div className='App' id={load?"no-scroll":"scroll"}>
-  //     <NavBar/>
-  //     <Routes>
-  //         <Route path="/" element={<Home/>} />
-  //     </Routes>
-  //   </div>    
-  // </Router>
+      <Router>
+    <PreLoader load={load}/>
+    <div className='App' id={load?"no-scroll":"scroll"}>
+      <NavBar/>
+      <ScrollToTop/>
+      <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/projects" element={ <Projects/>} />
+          <Route path="/contact" element={ <Contact/>} />
+          <Route path="/footer" element={<Footer/>} />
+          <Route path="/resume" element={<Resume/>} />
+          <Route path="*" element={<Navigate to="/"/>} />
+       </Routes>
+       <Footer/>
+     </div>    
+   </Router>
   );
 }
 

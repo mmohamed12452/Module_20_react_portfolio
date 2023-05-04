@@ -8,7 +8,7 @@ import About from '../components/Home/About';
 const Home = () => {
     return(
         <>
-           
+           <div style={{height:"80px", backgroundColor:"black"}}></div>
                     <About/>
                
            
