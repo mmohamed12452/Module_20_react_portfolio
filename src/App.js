@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import PreLoader from './components/PreLoader';
 import Projects from './pages/Projects';
 import Contact from  './pages/Contact';
+import Footer from './pages/Footer';
 
 import './App.css';
 import './style.css';
@@ -26,6 +27,7 @@ function App() {
     <>
     <Projects/>
     <Contact/>
+    <Footer/>
     </>
   //   <Router>
   //   <PreLoader load={load}/>

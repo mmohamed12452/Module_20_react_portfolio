@@ -10,7 +10,6 @@ const Home = () => {
         <section>
             <Container fluid className="home-section" id="home">
                 <Container className="home-content">
-            
                     <About/>
                 </Container>
             </Container>
