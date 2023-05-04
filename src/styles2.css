@@ -141,6 +141,34 @@ footer
     height: 20vh;
 }
 
+.about-me-wording{
+    width: 75%;
+}
+
+.about-profile-image{
+    width: 25%;
+    height: 95%;
+}
+
+.about-profile-image img{
+    width: 100%;
+    height: 80%;
+}
+
+
+#about-me{
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    margin: 0 !important;
+    height: 85vh !important;
+}
+
+#about-me .yellow{
+    color: yellow;
+}
 
 
 
