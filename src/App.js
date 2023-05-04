@@ -5,6 +5,7 @@ import NavBar from './components/Navbar/Navbar';
 import Home from './pages/Home';
 import PreLoader from './components/PreLoader';
 import Projects from './pages/Projects';
+import Contact from  './pages/Contact';
 
 import './App.css';
 import './style.css';
@@ -24,6 +25,7 @@ function App() {
   return (  
     <>
     <Projects/>
+    <Contact/>
     </>
   //   <Router>
   //   <PreLoader load={load}/>
